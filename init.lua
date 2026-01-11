@@ -921,6 +921,13 @@ require('lazy').setup({
 
       require('mini.comment').setup()
 
+      require('mini.align').setup {
+        mappings = {
+          start = 'ga',
+          start_with_preview = 'gA',
+        },
+      }
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
