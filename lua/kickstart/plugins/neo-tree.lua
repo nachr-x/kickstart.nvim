@@ -18,9 +18,9 @@ return {
       window = {
         mappings = {
           ['<C-e>'] = 'close_window',
-          ['s'] = 'open_split',
-          ['v'] = 'open_vsplit',
-          ['t'] = 'open_tabnew',
+          -- ['s'] = 'open_split',
+          -- ['v'] = 'open_vsplit',
+          -- ['t'] = 'open_tabnew',
         },
       },
     },
