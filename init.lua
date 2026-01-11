@@ -928,6 +928,10 @@ require('lazy').setup({
         },
       }
 
+      require('mini.tabline').setup {
+        tabpage_section = 'none',
+      }
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
