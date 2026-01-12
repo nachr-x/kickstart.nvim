@@ -943,6 +943,8 @@ require('lazy').setup({
         },
       }
 
+      require('mini.cursorword').setup()
+
       -- require('mini.tabline').setup {
       --   tabpage_section = 'none',
       -- }
