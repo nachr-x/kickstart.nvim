@@ -256,6 +256,20 @@ require('lazy').setup({
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
 
+  {
+    'stevearc/aerial.nvim',
+    opts = {
+      layout = {
+        default_direction = 'right',
+        min_width = 30,
+        max_width = 30,
+      },
+    },
+    keys = {
+      { '<leader>o', '<cmd>AerialToggle<CR>', desc = '[O]utline' },
+    },
+  },
+
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
   --    {
