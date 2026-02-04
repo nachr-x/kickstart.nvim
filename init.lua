@@ -298,6 +298,19 @@ require('lazy').setup({
     },
   },
 
+  {
+    'OXY2DEV/markview.nvim',
+    lazy = false,
+    config = function()
+      require('markview').setup()
+    end,
+    keys = {
+      { '<leader>m', '<cmd>Markview<CR>', desc = 'Markview: Toggle preview' },
+      -- 可选：分屏预览开关
+      { '<leader>ms', '<cmd>Markview splitToggle<CR>', desc = 'Markview: Toggle split view' },
+    },
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
