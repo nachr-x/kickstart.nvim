@@ -255,10 +255,28 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
+  -- OSC52: 把nvim复制内容通过终端发回本机剪切板
   {
-    "aikhe/wrapped.nvim",
-    dependencies = { "nvzone/volt" },
-    cmd = { "NvimWrapped" },
+    'ojroques/nvim-osc52',
+    config = function()
+      local osc52 = require 'osc52'
+      osc52.setup { max_length = 0, silent = true, trim = false }
+
+      vim.api.nvim_create_autocmd('TextYankPost', {
+        callback = function()
+          if vim.v.event.operator == 'y' then
+            local reg = (vim.v.event.regname == '' and '"') or vim.v.event.regname
+            osc52.copy_register(reg)
+          end
+        end,
+      })
+    end,
+  },
+
+  {
+    'aikhe/wrapped.nvim',
+    dependencies = { 'nvzone/volt' },
+    cmd = { 'NvimWrapped' },
     opts = {},
   },
 
