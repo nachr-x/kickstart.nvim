@@ -169,6 +169,9 @@ vim.o.confirm = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+---- jump to first or end of line
+vim.keymap.set('n', 'H', '^')
+vim.keymap.set('n', 'L', '$')
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
